@@ -1,4 +1,10 @@
+"use client";
+
+import { useRevealer } from "@/hooks/useRevealer";
+
 export default function StudioPage() {
+  useRevealer();
+
   return (
     <>
       <div className="revealer"></div>

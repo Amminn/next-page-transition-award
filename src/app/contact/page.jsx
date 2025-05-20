@@ -1,4 +1,9 @@
+"use client";
+import { useRevealer } from "@/hooks/useRevealer";
+
 export default function ContactPage() {
+  useRevealer();
+
   return (
     <>
       <div className="revealer"></div>

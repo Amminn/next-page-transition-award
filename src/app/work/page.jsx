@@ -1,4 +1,10 @@
+"use client";
+
+import { useRevealer } from "@/hooks/useRevealer";
+
 export default function WorkPage() {
+  useRevealer();
+
   return (
     <>
       <div className="revealer"></div>
