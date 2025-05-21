@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
+:root {
+  --bg: #1a1a1a;
+  --copy: #fff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+  background-color: #000;
+  color: var(--copy);
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  padding: 1.75em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Roboto Mono", monospace;
+}
+
+.links {
+  display: flex;
+  gap: 2em;
+}
+
+.logo a {
+  font-size: 2rem;
+}
+
+a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: var(--copy);
+  font-size: 12px;
+  font-weight: 600;
+  padding: 0.5em;
+}
+
+.home {
+  width: 100vw;
+  height: 100svh;
+  background-color: var(--bg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.home h1 {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-transform: uppercase;
+  color: var(--copy);
+  font-size: 20vw;
+  font-weight: bolder;
+  letter-spacing: -0.5rem;
+  line-height: 1;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+.home h1 .char {
+  position: relative;
+  will-change: transform;
+}
+
+.projects {
+  width: 100vw;
+  height: 100%;
+  min-height: 100svh;
+  background-color: var(--bg);
+  padding: 20em 1em;
+}
+
+.images {
+  width: 30%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}

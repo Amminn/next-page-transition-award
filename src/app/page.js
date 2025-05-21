@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <>
       <div className="home">
-        <div className="header">nuvoro</div>
+        <h1>Amin</h1>
       </div>
     </>
   );
