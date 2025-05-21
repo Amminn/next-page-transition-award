@@ -1,11 +1,16 @@
+"use client";
+
 import Link from "next/link";
+import { useTransitionRouter } from "next-view-transitions";
 
 export default function Nav() {
+  const router = useTransition();
+
   return (
     <nav className="nav">
       <div className="logo">
         <div className="link">
-          <Link href="/">Amminn</Link>
+          <a href="/"></a>
         </div>
       </div>
       <div className="links">
