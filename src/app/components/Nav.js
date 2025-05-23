@@ -1,12 +1,13 @@
 "use client";
 
-import Link from "next/link";
+import Link from "next/link"; // Make sure Link is imported
 import { useTransitionRouter } from "next-view-transitions";
 
 export default function Nav() {
   const router = useTransitionRouter();
 
   function slideInOut() {
+    // Your animation logic remains the same
     document.documentElement.animate(
       [
         {
@@ -44,56 +45,40 @@ export default function Nav() {
     );
   }
 
-  function handleLinkClick(e, path) {
-    e.preventDefault();
+  // You can keep this helper function or inline the logic
+  const handleTransitionNavigation = (e, path) => {
+    e.preventDefault(); // Prevent Link's default navigation
     router.push(path, {
       onTransitionReady: slideInOut,
     });
-  }
+  };
 
   return (
     <nav className="nav">
       <div className="logo">
         <div className="link">
-          <a
-            onClick={(e) => {
-              e.preventDefault();
-              router.push("/", {
-                onTransitionReady: slideInOut,
-              });
-            }}
-            href="/"
-          >
+          {/* Use Link component */}
+          <Link href="/" onClick={(e) => handleTransitionNavigation(e, "/")}>
             Index
-          </a>
+          </Link>
         </div>
       </div>
       <div className="links">
         <div className="link">
-          <a
-            onClick={(e) => {
-              e.preventDefault();
-              router.push("/project", {
-                onTransitionReady: slideInOut,
-              });
-            }}
+          <Link
             href="/project"
+            onClick={(e) => handleTransitionNavigation(e, "/project")}
           >
             Projects
-          </a>
+          </Link>
         </div>
         <div className="link">
-          <a
-            onClick={(e) => {
-              e.preventDefault();
-              router.push("/info", {
-                onTransitionReady: slideInOut,
-              });
-            }}
+          <Link
             href="/info"
+            onClick={(e) => handleTransitionNavigation(e, "/info")}
           >
             Info
-          </a>
+          </Link>
         </div>
       </div>
     </nav>
